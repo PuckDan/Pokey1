@@ -14,10 +14,8 @@ module.exports = {
             const embed = new Discord.MessageEmbed()
             .setTitle('Ping')
                 .setDescription('A Very Basic Ping Command!', true)
-                .addField(subcmd, '``Null``', true)
                 .addField(usagecmd, 'p!ping', true)
                 .addField(cat,'Fun', true)
-                .addField(percmd, '``Null``', true)
                 .setFooter('Made By PuckZ')
             message.channel.send(embed);
         }
@@ -27,13 +25,28 @@ module.exports = {
                 .setDescription('Infomation About Pokey', true)
                 .addField(subcmd, 'version', true)
                 .addField(usagecmd, 'p!info', true)
-                .addField(cat,'Fun', true)
+                .addField(cat,'Info', true)
                 .addField(percmd, '``Embed Links``', true)
                 .setFooter('Made By PuckZ')
             message.channel.send(embed);
 
+            } else if (args[1] === 'userinfo') {
+                const embed = new Discord.MessageEmbed()
+                .setTitle('Userinfo')
+                .setDescription('User Infomation', true)
+                .addField(usagecmd, 'p!userinfo', true)
+                .addField(cat,'Info', true)
+                .setFooter('Made By PuckZ')
+            message.channel.send(embed);
+
+             
+
           
-        } else {
+        } 
+
+         else {
+            
+
             const embed = new Discord.MessageEmbed()
                 .setTitle('Need Help? Here You Go!')
                 .setDescription('Commands marked with an * have subcommands.')
@@ -41,6 +54,8 @@ module.exports = {
                 .addField(Info, '``Info``*, ``help``, ``ping``')
                 .setFooter('Made By PuckZ')
             message.channel.send(embed);
+
+
 
     }
 }
