@@ -19,7 +19,7 @@ module.exports = {
                 .setDescription('A Very Basic Ping Command!', true)
                 .addField(usagecmd, 'p!ping', true)
                 .addField(cat, 'Fun', true)
-                .setFooter('Made By PuckZ')
+                .setTimestamp()
             message.channel.send(embed);
         } else if (args[1] === 'info') {
             const embed = new Discord.MessageEmbed()
@@ -29,7 +29,7 @@ module.exports = {
                 .addField(usagecmd, 'p!info', true)
                 .addField(cat, 'Info', true)
                 .addField(percmd, '``Embed Links``', true)
-                .setFooter('Made By PuckZ')
+                .setTimestamp()
             message.channel.send(embed);
 
         } else if (args[1] === 'userinfo') {
@@ -38,7 +38,7 @@ module.exports = {
                 .setDescription('User Infomation', true)
                 .addField(usagecmd, 'p!userinfo', true)
                 .addField(cat, 'Info', true)
-                .setFooter('Made By PuckZ')
+                .setTimestamp()
             message.channel.send(embed);
 
 
@@ -53,7 +53,7 @@ module.exports = {
                 .addField(exe, 'p!clear 10', true)
                 .addField(userpercmd, '``Manage Messages``', true)
                 .addField(percmd, '``Manage Messages``', true)
-                .setFooter('Made By PuckZ')
+                .setTimestamp()
             message.channel.send(embed);
 
         } else if (args[1] === 'youtube') {
@@ -62,7 +62,7 @@ module.exports = {
                 .setDescription('Sends a YouTube Link!', true)
                 .addField(usagecmd, 'p!youtube', true)
                 .addField(cat, 'Info', true)
-                .setFooter('Made By PuckZ')
+                .setTimestamp()
             message.channel.send(embed);
 
         } else if (args[1] === 'help') {
@@ -74,7 +74,7 @@ module.exports = {
                 .addField(cat, 'Info', true)
                 .addField(exe, 'p!help ping', true)
                 .addField(percmd, '``Embed Links``', true)
-                .setFooter('Made By PuckZ')
+                .setTimestamp()
             message.channel.send(embed);
 
         } else {
@@ -82,11 +82,13 @@ module.exports = {
 
             const embed = new Discord.MessageEmbed()
                 .setTitle('Need Help? Here You Go!')
-                .setDescription('Commands marked with an * have subcommands.', true)
-                .addField(fun, '``ping``')
-                .addField(mod, '``clear``*')
-                .addField(Info, '``Info``*, ``help``*')
-                .setFooter('Made By PuckZ')
+                .setDescription('Do ``p!help <command>`` to learn more infomation about that command! \n Commands marked with an * have subcommands.', false)
+                .addField('Updates','•**Updates Will Show Here!** \n**+** Major Update To The Help Command! \n **-** Deleted The Old Help Command')
+                .addField('Commands','``ping`` A basic ping command! \n ``userinfo`` User Infomation \n ``info``* Tells you about Pokey! \n ``clear``* Clears a message from the channel! \n ``youtube`` Shows a YouTube link! \n ``help``* View all of Pokeys commands!', false)
+                .addField('Add The Bot To Your Server!','Unfortunately this is a custom bot for my friend!')
+                .setColor(0xFE1010)
+                .setThumbnail('https://cdn.discordapp.com/attachments/723744088981241878/738219121803526264/Pokeypfp.jpg', false)
+                .setTimestamp()
             message.channel.send(embed);
 
 
