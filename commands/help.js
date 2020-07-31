@@ -83,10 +83,10 @@ module.exports = {
             const embed = new Discord.MessageEmbed()
                 .setTitle('Need Help? Here You Go!')
                 .setDescription('Do ``p!help <command>`` to learn more infomation about that command! \n Commands marked with an * have subcommands.', false)
-                .addField('Updates','•**Updates Will Show Here!** \n**+** Major Update To The Help Command! \n **-** Deleted The Old Help Command')
-                .addField('Commands','``ping`` A basic ping command! \n ``userinfo`` User Infomation \n ``info``* Tells you about Pokey! \n ``clear``* Clears a message from the channel! \n ``youtube`` Shows a YouTube link! \n ``help``* View all of Pokeys commands!', false)
+                .addField('Updates','•**Updates Will Show Here!** \n**+** Major Update To The Help Command! \n **-** Deleted The Old Help Command \n **+** Updated the info command with more infomation! \n **+** Added a prefix command!')
+                .addField('Commands','``ping`` A basic ping command! \n ``userinfo`` User Infomation \n ``info``* Tells you about Pokey! \n ``clear``* Clears a message from the channel! \n ``youtube`` Shows a YouTube link! \n ``preifx <charcter>`` can be used to change the bots prefix! \n ``help``* View all of Pokeys commands!', false)
                 .addField('Add The Bot To Your Server!','Unfortunately this is a custom bot for my friend!')
-                .setColor(0xFE1010)
+                .setColor(0xE3D9D9)
                 .setThumbnail('https://cdn.discordapp.com/attachments/723744088981241878/738219121803526264/Pokeypfp.jpg', false)
                 .setTimestamp()
             message.channel.send(embed);

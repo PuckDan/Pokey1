@@ -1,4 +1,5 @@
 const Discord = require('discord.js');
+const db = require('quick.db')
 const fs = require('fs');
 const {
     timeLog,
@@ -32,10 +33,10 @@ client.on('ready', () => {
 })
 
 client.on('message', message => {
-    if (!message.content.startsWith(prefix) || message.author.bot) return;
+    const prefix = db.get(`guild_${message.guild.id}_prefix`) || "p!"
+    if (!message.content.startsWith(prefix)) return
 
-    const args = message.content.slice(prefix.length).split(/ +/);
-
+    const args = message.content.substring(prefix.length).split(" ")
 
     switch (args[0]) {
         case 'ping':
@@ -60,8 +61,8 @@ client.on('message', message => {
 
                     break;
                 }
-                case 'kick':
-                    
+                case 'prefix':
+                    client.commands.get('prefix').execute(message, args);
                     break;
 
 
