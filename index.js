@@ -64,9 +64,12 @@ client.on('message', message => {
                 case 'prefix':
                     client.commands.get('prefix').execute(message, args);
                     break;
+                    case 'kick':
+                        
+                        break;
 
-
-    }
+    } 
+    
 })
 
 client.login(token);

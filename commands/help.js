@@ -1,7 +1,4 @@
 const Discord = require('discord.js');
-var Info = 'Info • 3';
-var mod = 'Moderation • 1';
-var fun = 'Fun • 1';
 var subcmd = 'SubCommands';
 var usagecmd = 'Usage';
 var percmd = 'Bot Permissons';
@@ -77,7 +74,20 @@ module.exports = {
                 .setTimestamp()
             message.channel.send(embed);
 
-        } else {
+        }  else if (args[1] === 'prefix'){
+            const embed = new Discord.MessageEmbed()
+            .setTitle('Prefix')
+            .setDescription('Can be used to change the bots prefix!')
+            .addField(usagecmd, 'p!prefix <charcter>', true)
+            .addField(cat, 'Moderation', true)
+            .addField(exe, 'p!prefix !', true)
+            .addField(userpercmd, '``Manage Server``', true)
+            .addField(percmd, '``Manage Server``', true)
+            .setTimestamp()
+        message.channel.send(embed);
+
+        }
+        else {
 
 
             const embed = new Discord.MessageEmbed()
@@ -85,7 +95,7 @@ module.exports = {
                 .setDescription('Do ``p!help <command>`` to learn more infomation about that command! \n Commands marked with an * have subcommands.', false)
                 .addField('Updates','•**Updates Will Show Here!** \n**+** Major Update To The Help Command! \n **-** Deleted The Old Help Command \n **+** Updated the info command with more infomation! \n **+** Added a prefix command!')
                 .addField('Commands','``ping`` A basic ping command! \n ``userinfo`` User Infomation \n ``info``* Tells you about Pokey! \n ``clear``* Clears a message from the channel! \n ``youtube`` Shows a YouTube link! \n ``preifx <charcter>`` can be used to change the bots prefix! \n ``help``* View all of Pokeys commands!', false)
-                .addField('Add The Bot To Your Server!','Unfortunately this is a custom bot for my friend!')
+                .addField('Add The Bot To Your Server!','https://discord.com/oauth2/authorize?client_id=734904840190164992&scope=bot&permissions=2146958847')
                 .setColor(0xE3D9D9)
                 .setThumbnail('https://cdn.discordapp.com/attachments/723744088981241878/738219121803526264/Pokeypfp.jpg', false)
                 .setTimestamp()

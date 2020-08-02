@@ -11,7 +11,7 @@ module.exports = {
                     .addField('Current Server', message.guild.name)
                     .setColor(0x00F7FF)
                     .setThumbnail(message.author.displayAvatarURL())
-                    .setFooter('Made By PuckZ')
+                    .setTimestamp()
                 message.channel.send(embed);
     }
 }
