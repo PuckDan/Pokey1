@@ -60,5 +60,5 @@ const prefix = '!';
         return message.channel.send(`I have now set your prefix to ${args[1]}`)
 ```
 
-more commands coming soon!
+more moderation commands coming soon!
 
