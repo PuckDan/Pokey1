@@ -6,9 +6,9 @@ description: to the Pokey Project!
 
 ## Getting Pokey on your own Server <a id="getting-trenite-on-your-own-server"></a>
 
-Just ****[**click**](http://invite.pokey.ml) ****this link and add it.
+Just ****click ****this link and add it.
 
-[invite.](www.invite.pokey.ml)
+invite.pokey.ml
 
 
 
