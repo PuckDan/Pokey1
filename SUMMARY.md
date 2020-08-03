@@ -11,3 +11,7 @@
 
 * [Moderation](commands/moderation.md)
 
+---
+
+* [Invite Link](http://invite.pokey.ml)
+
