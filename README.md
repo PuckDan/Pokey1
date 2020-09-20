@@ -9,7 +9,7 @@ description: to the Pokey Project!
 Just ****click ****this link and add it.
 
 invite.pokey.ml
-
+[![Run on Repl.it](https://repl.it/badge/github/PuckZDev/Pokey1)](https://repl.it/github/PuckZDev/Pokey1)
 
 
 {% hint style="warning" %}
